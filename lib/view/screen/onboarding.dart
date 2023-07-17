@@ -1,15 +1,53 @@
+import 'package:e_commerce/data/datasource/static/static.dart';
 import 'package:flutter/material.dart';
+
+import '../../core/constant/color.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      body : Center(
-        child: Container(
-          padding: const EdgeInsets.all(10),
-          child: const Text("Onboarding Screen"),
+    return Scaffold(
+      body: SafeArea(
+        child: PageView.builder(
+          itemCount: onBoardingList.length,
+          itemBuilder: (BuildContext context, int index) {
+            return Column(
+              children: [
+                Text(
+                  onBoardingList[index].title!,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 22,
+                  ),
+                ),
+                const SizedBox(
+                  height: 60,
+                ),
+                Image.asset(onBoardingList[index].image!,
+                  fit: BoxFit.fill,
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                Container(
+                  width: double.infinity,
+                  alignment: Alignment.center,
+                  child: Text(
+                    onBoardingList[index].body!,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      height: 2,
+                      color: AppColor.grey,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ],
+            );
+          },
         ),
       ),
     );
