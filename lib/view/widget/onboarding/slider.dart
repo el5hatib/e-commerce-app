@@ -1,9 +1,10 @@
+import 'package:e_commerce/controller/onboarding_controller.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 import '../../../core/constant/color.dart';
 import '../../../data/datasource/static/static.dart';
 
-class CustomeSlider extends StatelessWidget {
+class CustomeSlider extends GetView<OnBoardingControllerImpl> {
   const CustomeSlider({
     super.key,
   });
@@ -11,6 +12,8 @@ class CustomeSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
+      controller: controller.pageController,
+      onPageChanged: (index) => controller.onPageChanged(index),
       itemCount: onBoardingList.length,
       itemBuilder: (BuildContext context, int index) {
         return Column(

@@ -1,5 +1,6 @@
+import 'package:e_commerce/controller/onboarding_controller.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 import '../../../core/constant/color.dart';
 import '../../../data/datasource/static/static.dart';
 
@@ -10,7 +11,7 @@ class DotController extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return GetBuilder<OnBoardingControllerImpl>(builder: (controller)=> Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         ...List.generate(
@@ -21,7 +22,7 @@ class DotController extends StatelessWidget {
 
             ),
             duration: const Duration(seconds: 1),
-            width: 6,
+            width: controller.currentPageIndex==index? 20: 6,
             height: 6,
             decoration: BoxDecoration(
                 color: AppColor.primaryColor,
@@ -29,6 +30,6 @@ class DotController extends StatelessWidget {
           ),
         ),
       ],
-    );
+    ), );
   }
 }
