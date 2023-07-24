@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'core/localization/translation.dart';
 import 'core/services/services.dart';
 import 'routes.dart';
-import 'view/screen/onboarding.dart';
+import 'view/screen/language.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
         ),
 
       ),
-      home: const Onboarding(),
+      home: const Language(),
       routes: routes,
     );
   }

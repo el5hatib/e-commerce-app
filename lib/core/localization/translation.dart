@@ -4,10 +4,10 @@ class MyTranslations extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         'en': {
-          'title': 'Home Page %s',
+          'chooseLang': 'Choose Your Preferred Language %s',
         },
         'ar': {
-          'title': 'الصفحة الرئيسيه %s',
+          'chooseLang': 'أختر لغتك المفضله %s',
         },
       };
 }
