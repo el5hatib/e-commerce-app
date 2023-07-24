@@ -1,10 +1,14 @@
 import 'package:e_commerce/core/constant/color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'core/localization/translation.dart';
+import 'core/services/services.dart';
 import 'routes.dart';
 import 'view/screen/onboarding.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initServices();
   runApp(const MyApp());
 }
 
@@ -15,6 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      translations: MyTranslations(),
       debugShowCheckedModeBanner: false,
       title: 'E-commerce App',
       theme: ThemeData(
