@@ -1,0 +1,37 @@
+class AppRoutes {
+  static const String home = '/';
+  static const String login = '/login';
+  static const String register = '/register';
+  static const String onBoarding = '/onBoarding';
+  static const String forgotPassword = '/forgotPassword';
+  static const String otp = '/otp';
+  static const String resetPassword = '/resetPassword';
+  static const String productDetail = '/productDetail';
+  static const String cart = '/cart';
+  static const String checkout = '/checkout';
+  static const String payment = '/payment';
+  static const String profile = '/profile';
+  static const String editProfile = '/editProfile';
+  static const String changePassword = '/changePassword';
+  static const String address = '/address';
+  static const String addAddress = '/addAddress';
+  static const String editAddress = '/editAddress';
+  static const String order = '/order';
+  static const String orderDetail = '/orderDetail';
+  static const String notification = '/notification';
+  static const String search = '/search';
+  static const String category = '/category';
+  static const String subCategory = '/subCategory';
+  static const String productByCategory = '/productByCategory';
+  static const String productBySubCategory = '/productBySubCategory';
+  static const String productByBrand = '/productByBrand';
+  static const String productByOffer = '/productByOffer';
+  static const String productBySearch = '/productBySearch';
+  static const String productByFilter = '/productByFilter';
+  static const String productByCollection = '/productByCollection';
+  static const String productByCollectionDetail = '/productByCollectionDetail';
+  static const String productByBrandDetail = '/productByBrandDetail';
+  static const String productByOfferDetail = '/productByOfferDetail';
+  static const String productByFlashSale = '/productByFlashSale';
+  static const String productByFlashSaleDetail = '/productByFlashSaleDetail';
+}
