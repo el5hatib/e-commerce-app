@@ -12,7 +12,7 @@ class Login extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'Sign In',
+          'sign in'.tr,
           style: Theme.of(context)
               .textTheme
               .titleLarge!
@@ -35,21 +35,22 @@ class Login extends StatelessWidget {
               height: 10,
             ),
             Container(
-                margin: const EdgeInsets.symmetric(horizontal: 25),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
                   "signHint".tr,
                   textAlign: TextAlign.center,
                 ),
             ),
             const SizedBox(
-              height: 20,
+              height:60,
             ),
             TextFormField(
               decoration: InputDecoration(
+                hintStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(color: AppColor.grey),
                 hintText: 'emailHint'.tr,
                suffixIcon: const Icon(Icons.email_outlined),
                 contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
-                label: Text('email'.tr,),
+                label: Text('email'.tr, ),
                 floatingLabelBehavior: FloatingLabelBehavior.always,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30),
@@ -58,10 +59,11 @@ class Login extends StatelessWidget {
               keyboardType: TextInputType.emailAddress,
             ),
             const SizedBox(
-              height: 10,
+              height: 25,
             ),
             TextFormField(
               decoration: InputDecoration(
+                hintStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(color: AppColor.grey),
                 hintText: 'passwordHint'.tr,
                 suffixIcon: const Icon(Icons.lock_outline),
                 contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
