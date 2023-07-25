@@ -5,6 +5,7 @@ class MyTranslations extends Translations {
   Map<String, Map<String, String>> get keys => {
         'en': {
           'chooseLang': 'Choose Your Preferred Language',
+          'onBoardingButton': 'Continue',
           'onBoardingChooseProduct': 'Choose Your Product',
           'easySafePayment': 'Easy & Safe Payment',
           'trackYourOrder': 'Track Your Order',
@@ -23,6 +24,7 @@ class MyTranslations extends Translations {
         },
         'ar': {
           'chooseLang': 'أختر لغتك المفضله ',
+          'onBoardingButton': 'أستمر',
           'onBoardingChooseProduct': 'أختر منتجك',
           'easySafePayment': 'الدفع السهل والآمن',
           'trackYourOrder': 'تتبع طلبك',

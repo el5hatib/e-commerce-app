@@ -49,7 +49,7 @@ class Login extends StatelessWidget {
                 hintStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(color: AppColor.grey),
                 hintText: 'emailHint'.tr,
                suffixIcon: const Icon(Icons.email_outlined),
-                contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 25),
                 label: Text('email'.tr, ),
                 floatingLabelBehavior: FloatingLabelBehavior.always,
                 border: OutlineInputBorder(
@@ -66,7 +66,7 @@ class Login extends StatelessWidget {
                 hintStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(color: AppColor.grey),
                 hintText: 'passwordHint'.tr,
                 suffixIcon: const Icon(Icons.lock_outline),
-                contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 25),
                 label: Text('password'.tr,),
                 floatingLabelBehavior: FloatingLabelBehavior.always,
                 border: OutlineInputBorder(
