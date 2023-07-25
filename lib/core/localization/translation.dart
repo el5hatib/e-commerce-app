@@ -7,7 +7,7 @@ class MyTranslations extends Translations {
           'chooseLang': 'Choose Your Preferred Language %s',
         },
         'ar': {
-          'chooseLang': 'أختر لغتك المفضله %s',
+          'chooseLang': 'أختر لغتك المفضله ',
         },
       };
 }

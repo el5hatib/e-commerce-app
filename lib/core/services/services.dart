@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 class MyServices extends GetxService {
-  late SharedPreferences _prefs;
+  late SharedPreferences prefs;
   Future<MyServices> init() async {
-    _prefs = await SharedPreferences.getInstance();
+    prefs = await SharedPreferences.getInstance();
     return this;
   }
 }
