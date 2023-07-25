@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../core/constant/color.dart';
+import '../../widget/authentication/customTextFormAuth.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -35,44 +36,29 @@ class Login extends StatelessWidget {
               height: 10,
             ),
             Container(
-                margin: const EdgeInsets.symmetric(horizontal: 20),
-                child: Text(
-                  "signHint".tr,
-                  textAlign: TextAlign.center,
-                ),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                "signHint".tr,
+                textAlign: TextAlign.center,
+              ),
             ),
             const SizedBox(
-              height:60,
+              height: 60,
             ),
-            TextFormField(
-              decoration: InputDecoration(
-                hintStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(color: AppColor.grey),
-                hintText: 'emailHint'.tr,
-               suffixIcon: const Icon(Icons.email_outlined),
-                contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 25),
-                label: Text('email'.tr, ),
-                floatingLabelBehavior: FloatingLabelBehavior.always,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
-              ),
+            const  CustomTextFormAuth(
+              hint: 'emailHint',
+              label: 'email',
+              icon: Icons.email_outlined,
+              obscureText: false,
               keyboardType: TextInputType.emailAddress,
             ),
             const SizedBox(
               height: 25,
             ),
-            TextFormField(
-              decoration: InputDecoration(
-                hintStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(color: AppColor.grey),
-                hintText: 'passwordHint'.tr,
-                suffixIcon: const Icon(Icons.lock_outline),
-                contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 25),
-                label: Text('password'.tr,),
-                floatingLabelBehavior: FloatingLabelBehavior.always,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
-              ),
+           const  CustomTextFormAuth(
+              hint: 'passwordHint',
+              label: 'password',
+              icon: Icons.lock_outline_sharp,
               obscureText: true,
               keyboardType: TextInputType.visiblePassword,
             ),
