@@ -21,6 +21,10 @@ class MyTranslations extends Translations {
           'email' : 'Email',
           'password' : 'Password',
           'passwordHint' : 'Enter Your Password',
+          'forgetPassword' : 'Forget Password ?',
+          'login' : 'Login',
+          "haven't account" :" Don't have Account ?",
+          "sign up" : "Sign Up",
         },
         'ar': {
           'chooseLang': 'أختر لغتك المفضله ',
@@ -40,6 +44,10 @@ class MyTranslations extends Translations {
           'email' : 'البريد الإلكتروني',
           'password' : 'كلمة المرور',
           'passwordHint' : 'أدخل كلمة المرور',
+          'forgetPassword' : 'نسيت كلمة المرور ؟',
+          'login' : 'تسجيل الدخول',
+          "haven't account" :" ليس لديك حساب ؟",
+          "sign up" : "تسجيل حساب جديد",
         },
       };
 }
