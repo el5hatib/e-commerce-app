@@ -26,7 +26,7 @@ class Language extends GetView<LanguageController> {
               languageTitle: "العربية",
               changeLanguage: () {
                 controller.changeLang('ar');
-                Get.toNamed(AppRoutes.onBoarding);
+                Get.toNamed(AppRoutes.onboarding);
               },
             ),
             const SizedBox(
@@ -35,8 +35,8 @@ class Language extends GetView<LanguageController> {
             languageButton(
               languageTitle: "English",
               changeLanguage: () {
-                controller.changeLang('en');
-                Get.toNamed(AppRoutes.onBoarding);
+              controller.changeLang('en');
+                Get.toNamed(AppRoutes.onboarding);
               },
             ),
           ],
