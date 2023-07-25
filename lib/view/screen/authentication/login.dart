@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../core/constant/color.dart';
+import '../../widget/authentication/customTextBodyAuth.dart';
 import '../../widget/authentication/customTextFormAuth.dart';
+import '../../widget/authentication/customTextTitleAuth.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -23,39 +25,29 @@ class Login extends StatelessWidget {
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 30.0),
         child: ListView(
-          children: [
-            const SizedBox(
+          children:const  [
+             SizedBox(
               height: 20,
             ),
-            Text(
-              "welcome".tr,
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            const SizedBox(
+             CustomTextTitleAuth(title: 'welcome',),
+             SizedBox(
               height: 10,
             ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20),
-              child: Text(
-                "signHint".tr,
-                textAlign: TextAlign.center,
-              ),
-            ),
-            const SizedBox(
+             CustomTextBodyAuth(body: 'signHint',),
+             SizedBox(
               height: 60,
             ),
-            const  CustomTextFormAuth(
+              CustomTextFormAuth(
               hint: 'emailHint',
               label: 'email',
               icon: Icons.email_outlined,
               obscureText: false,
               keyboardType: TextInputType.emailAddress,
             ),
-            const SizedBox(
+             SizedBox(
               height: 25,
             ),
-           const  CustomTextFormAuth(
+             CustomTextFormAuth(
               hint: 'passwordHint',
               label: 'password',
               icon: Icons.lock_outline_sharp,
@@ -68,3 +60,7 @@ class Login extends StatelessWidget {
     );
   }
 }
+
+
+
+
