@@ -25,6 +25,11 @@ class MyTranslations extends Translations {
           'login' : 'Login',
           "haven't account" :" Don't have Account ?",
           "sign up" : "Sign Up",
+          'userNameHint' : 'Enter Your User Name',
+          'userName' : 'User Name',
+          'phoneNumberHint' : 'Enter Your Phone Number',
+          'phoneNumber' : 'Phone Number',
+          'alreadyHaveAccount' : 'Already Have Account ?',
         },
         'ar': {
           'chooseLang': 'أختر لغتك المفضله ',
@@ -48,6 +53,11 @@ class MyTranslations extends Translations {
           'login' : 'تسجيل الدخول',
           "haven't account" :" ليس لديك حساب ؟",
           "sign up" : "تسجيل حساب جديد",
+          'userNameHint' : 'أدخل إسم المستخدم',
+          'userName' : 'إسم المستخدم',
+          'phoneNumberHint' : 'أدخل رقم الهاتف',
+          'phoneNumber' : 'رقم الهاتف',
+          'alreadyHaveAccount' : 'لديك حساب بالفعل ؟',
         },
       };
 }

@@ -2,17 +2,20 @@ import 'package:e_commerce/view/widget/authentication/customButtonAuth.dart';
 import 'package:e_commerce/view/widget/authentication/logoAuth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import '../../../controller/autentication/login_controller.dart';
 import '../../../core/constant/color.dart';
 import '../../widget/authentication/customTextBodyAuth.dart';
 import '../../widget/authentication/customTextFormAuth.dart';
 import '../../widget/authentication/customTextTitleAuth.dart';
+import '../../widget/authentication/textSign.dart';
 
 class Login extends StatelessWidget {
+
   const Login({super.key});
 
   @override
   Widget build(BuildContext context) {
+    LoginControllerImpl controller= Get.put(LoginControllerImpl());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -39,22 +42,22 @@ class Login extends StatelessWidget {
              const SizedBox(
               height: 50,
             ),
-              const CustomTextFormAuth(
+               CustomTextFormAuth(
               hint: 'emailHint',
               label: 'email',
               icon: Icons.email_outlined,
               obscureText: false,
-              keyboardType: TextInputType.emailAddress,
+              keyboardType: TextInputType.emailAddress, myController: controller.emailController,
             ),
              const SizedBox(
               height: 25,
             ),
-             const CustomTextFormAuth(
+              CustomTextFormAuth(
               hint: 'passwordHint',
               label: 'password',
               icon: Icons.lock_outline_sharp,
               obscureText: true,
-              keyboardType: TextInputType.visiblePassword,
+              keyboardType: TextInputType.visiblePassword, myController: controller.passwordController,
             ),
             Text("forgetPassword".tr,
               style: Theme.of(context).textTheme.bodySmall!.copyWith(
@@ -66,29 +69,17 @@ class Login extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            Row(
-              children: [
-                Text("haven't account".tr,
-                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                    color: AppColor.grey,
-                  ),
-                ),
-                InkWell(
-                  onTap: (){},
-                  child: Text('sign up'.tr,
-                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                      color: AppColor.primaryColor,
-                    ),
-                  ),
-                )
-              ],
-            ),
+              CustomTextSignUpOrIn(title: 'sign up',title2: "haven't account",onPressed:(){
+                controller.goToRegister();
+              },),
           ],
         ),
       ),
     );
   }
 }
+
+
 
 
 
