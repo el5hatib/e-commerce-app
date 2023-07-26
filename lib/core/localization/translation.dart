@@ -30,6 +30,13 @@ class MyTranslations extends Translations {
           'phoneNumberHint' : 'Enter Your Phone Number',
           'phoneNumber' : 'Phone Number',
           'alreadyHaveAccount' : 'Already Have Account ?',
+          'forgotPassword' : 'Forget Password ',
+          'checkEmail' : 'Check Your Email',
+          'check': 'Check',
+          'checkEmailBody' : 'We\'ve sent an email to your email address. \n Please check your email to reset your password',
+          'otp' : 'Verification Code',
+          'resetPassword' : 'Reset Password',
+          'checkOTP' : 'Check Your Verification Code',
         },
         'ar': {
           'chooseLang': 'أختر لغتك المفضله ',
@@ -58,6 +65,13 @@ class MyTranslations extends Translations {
           'phoneNumberHint' : 'أدخل رقم الهاتف',
           'phoneNumber' : 'رقم الهاتف',
           'alreadyHaveAccount' : 'لديك حساب بالفعل ؟',
+          'forgotPassword' : 'نسيت كلمة المرور',
+          'checkEmail' : 'تحقق من بريدك الإلكتروني',
+          'check': 'تحقق',
+          'checkEmailBody' : 'لقد أرسلنا بريد إلكتروني إلى عنوان بريدك الإلكتروني. \n يرجى التحقق من بريدك الإلكتروني لإعادة تعيين كلمة المرور',
+          'otp' : 'كود التحقق',
+          'resetPassword' : 'إعادة تعيين كلمة المرور',
+          'checkOTP' : 'تحقق من كود التحقق',
         },
       };
 }

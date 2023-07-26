@@ -59,11 +59,16 @@ class Login extends StatelessWidget {
               obscureText: true,
               keyboardType: TextInputType.visiblePassword, myController: controller.passwordController,
             ),
-            Text("forgetPassword".tr,
-              style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                color: AppColor.grey,
+            InkWell(
+              onTap: (){
+                controller.goToForgetPassword();
+              },
+              child: Text("forgetPassword".tr,
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                  color: AppColor.grey,
+                ),
+                textAlign: TextAlign.end,
               ),
-              textAlign: TextAlign.end,
             ),
             CustomButtonAuth(buttonText: 'login'.tr, onPressed: (){}),
             const SizedBox(
