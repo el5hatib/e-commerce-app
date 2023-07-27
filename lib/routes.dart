@@ -6,6 +6,8 @@ import 'view/screen/authentication/register.dart';
 import 'view/screen/authentication/forgotPassword.dart';
 import 'view/screen/authentication/resetPassword.dart';
 import 'view/screen/authentication/otp.dart';
+import 'view/screen/authentication/success_reset_password.dart';
+import 'view/screen/authentication/success_create_new_account.dart';
 Map<String,Widget Function (BuildContext)> routes = {
   AppRoutes.login: (context) => const Login(),
   AppRoutes.onboarding: (context) => const Onboarding(),
@@ -13,5 +15,8 @@ Map<String,Widget Function (BuildContext)> routes = {
   AppRoutes.forgotPassword: (context) => const ForgetPassword(),
   AppRoutes.resetPassword: (context) => const ResetPassword(),
   AppRoutes.otp: (context) => const OTP(),
+  AppRoutes.successResetPassword: (context) => const SuccessResetPassword(),
+  AppRoutes.successCreateNewAccount: (context) => const SuccessCreateNewAccount(),
+
 
 };

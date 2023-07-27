@@ -6,6 +6,9 @@ class AppRoutes {
   static const String forgotPassword = '/forgotPassword';
   static const String otp = '/otp';
   static const String resetPassword = '/resetPassword';
+  static const String changeLanguage = '/changeLanguage';
+  static const String successResetPassword = '/successResetPassword';
+  static const String successCreateNewAccount = '/SuccessCreateNewAccount';
   static const String productDetail = '/productDetail';
   static const String cart = '/cart';
   static const String checkout = '/checkout';

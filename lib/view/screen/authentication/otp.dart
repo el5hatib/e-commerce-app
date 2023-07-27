@@ -1,10 +1,9 @@
-import 'package:e_commerce/view/widget/authentication/customButtonAuth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
-import '../../../controller/autentication/forget_password_controller.dart';
+import '../../../controller/autentication/otp_controller.dart';
 import '../../../core/constant/color.dart';
 import '../../widget/authentication/customTextBodyAuth.dart';
-import '../../widget/authentication/customTextFormAuth.dart';
 import '../../widget/authentication/customTextTitleAuth.dart';
 
 class OTP extends StatelessWidget {
@@ -12,7 +11,7 @@ class OTP extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ForgetPasswordControllerImpl controller = Get.put(ForgetPasswordControllerImpl());
+    OTPControllerImpl controller = Get.put(OTPControllerImpl());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -41,31 +40,36 @@ class OTP extends StatelessWidget {
               body: 'checkEmailBody',
             ),
             const SizedBox(
-              height: 50,
+              height: 75,
+            ),
+            OtpTextField(
+                borderRadius: BorderRadius.circular(15),
+                fieldWidth: 50,
+                keyboardType: TextInputType.number,
+                decoration: const InputDecoration(
+                  contentPadding: EdgeInsets.symmetric(vertical: 8),
+                  border: OutlineInputBorder(),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey),
+                  ),
+                ),
+                numberOfFields: 5,
+                borderColor: const Color(0xFF512DA8),
+                //set to true to show as box or false to show as dash
+                showFieldAsBox: true,
+                //runs when a code is typed in
+                onCodeChanged: (String code) {
+                  //handle validation or checks here
+                },
+                //runs when every textfield is filled
+                onSubmit: (String verificationCode){
+                 // controller.checkOTP(verificationCode);
+                  controller.goToResetPassword();
+                }
+              // end onSubmit
             ),
             const SizedBox(
-              height: 25,
-            ),
-            CustomTextFormAuth(
-              hint: 'emailHint',
-              label: 'email',
-              icon: Icons.email_outlined,
-              obscureText: false,
-              keyboardType: TextInputType.emailAddress,
-              myController: controller.emailController,
-            ),
-            const SizedBox(
-              height: 25,
-            ),
-            const SizedBox(
-              height: 25,
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            CustomButtonAuth(buttonText: 'check'.tr, onPressed: () {}),
-            const SizedBox(
-              height: 20,
+              height: 100,
             ),
           ],
         ),

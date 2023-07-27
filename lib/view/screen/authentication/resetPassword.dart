@@ -1,8 +1,7 @@
 import 'package:e_commerce/view/widget/authentication/customButtonAuth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../../controller/autentication/forget_password_controller.dart';
+import '../../../controller/autentication/reset_password_controller.dart';
 import '../../../core/constant/color.dart';
 import '../../widget/authentication/customTextBodyAuth.dart';
 import '../../widget/authentication/customTextFormAuth.dart';
@@ -12,7 +11,7 @@ class ResetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ForgetPasswordControllerImpl controller = Get.put(ForgetPasswordControllerImpl());
+    ResetPasswordControllerImpl controller = Get.put(ResetPasswordControllerImpl());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -32,13 +31,13 @@ class ResetPassword extends StatelessWidget {
               height: 20,
             ),
             const CustomTextTitleAuth(
-              title: 'checkEmail',
+              title: 'resetPasswordBody',
             ),
             const SizedBox(
               height: 10,
             ),
             const CustomTextBodyAuth(
-              body: 'checkEmailBody',
+              body: 'resetPasswordBodyHint',
             ),
             const SizedBox(
               height: 50,
@@ -47,23 +46,30 @@ class ResetPassword extends StatelessWidget {
               height: 25,
             ),
             CustomTextFormAuth(
-              hint: 'emailHint',
-              label: 'email',
-              icon: Icons.email_outlined,
-              obscureText: false,
-              keyboardType: TextInputType.emailAddress,
-              myController: controller.emailController,
+              hint: 'resetPasswordBody',
+              label: 'password',
+              icon: Icons.lock_outline_sharp,
+              obscureText: true,
+              keyboardType: TextInputType.visiblePassword,
+              myController: controller.passwordController,
             ),
             const SizedBox(
               height: 25,
             ),
-            const SizedBox(
-              height: 25,
+            CustomTextFormAuth(
+              hint: 'reTypePassword',
+              label: 'confirmPassword',
+              icon: Icons.lock_outline_sharp,
+              obscureText: true,
+              keyboardType: TextInputType.visiblePassword,
+              myController: controller.confirmPasswordController,
             ),
             const SizedBox(
-              height: 30,
+              height: 40,
             ),
-            CustomButtonAuth(buttonText: 'check'.tr, onPressed: () {}),
+            CustomButtonAuth(buttonText: 'save'.tr, onPressed: () {
+              controller.goToSuccessResetPassword();
+            }),
             const SizedBox(
               height: 20,
             ),

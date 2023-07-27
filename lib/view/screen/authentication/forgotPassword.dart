@@ -39,7 +39,7 @@ class ForgetPassword extends StatelessWidget {
               height: 10,
             ),
             const CustomTextBodyAuth(
-              body: 'checkEmailBody',
+              body: 'enterEmailBody',
             ),
             const SizedBox(
               height: 50,
@@ -64,7 +64,9 @@ class ForgetPassword extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            CustomButtonAuth(buttonText: 'check'.tr, onPressed: () {}),
+            CustomButtonAuth(buttonText: 'check'.tr, onPressed: () {
+              controller.goToOTP();
+            }),
             const SizedBox(
               height: 20,
             ),
