@@ -13,7 +13,7 @@ class SuccessResetPassword extends StatelessWidget {
      appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'forgotPassword'.tr,
+          'successResetPassword'.tr,
           style: Theme.of(context)
               .textTheme
               .titleLarge!
@@ -25,10 +25,10 @@ class SuccessResetPassword extends StatelessWidget {
         child:  Column(
           children: [
             const Center(child: Icon(Icons.check_circle_outline, size: 150 , color: AppColor.primaryColor,),),
-            const SizedBox(height: 30,) ,
-            Text("checkSuccess".tr),
+            const SizedBox(height: 50,) ,
+            Text("checkSuccess".tr,style: Theme.of(context).textTheme.titleLarge,textAlign: TextAlign.center,),
             const SizedBox(height: 10,) ,
-            Container(
+            SizedBox(
               width: double.infinity,
               child: CustomButtonAuth(buttonText: 'login'.tr, onPressed: () {
                 Get.offNamed(AppRoutes.login);

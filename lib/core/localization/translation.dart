@@ -47,6 +47,7 @@ class MyTranslations extends Translations {
           'save' : 'Save',
           'success' : 'Success Operation',
           'checkSuccess':'Now you can got to the Login page ',
+          "successResetPassword": " Password was reset successfully",
 
         },
         'ar': {
@@ -93,6 +94,7 @@ class MyTranslations extends Translations {
           'save' : 'حفظ',
           'success' : 'لقد تمت العملية بنجاح',
           'checkSuccess':'الان يمكنك الذهاب الي صفحة تسجيل الدخول ',
+          "successResetPassword": " تم اعادة تعين كلمه المرور بنجاح",
         },
       };
 }
