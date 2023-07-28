@@ -32,6 +32,8 @@ class MyTranslations extends Translations {
           'alreadyHaveAccount' : 'Already Have Account ?',
           'forgotPassword' : 'Forget Password ',
           'checkEmail' : 'Check Your Email',
+          'checkEmailTitle': 'Check Email',
+          'successSignUp': 'Success Sign UP',
           'check': 'Check',
           'enterEmailBody' : 'Enter Your Email Address To Reset Your Password',
           'checkEmailBody' : 'We\'ve sent a verification code to your email address. \n Please check your email and enter the verification code we have been sent  \n to reset your password',
@@ -43,6 +45,8 @@ class MyTranslations extends Translations {
           'reTypePassword' : 'Re-Type Password',
           'resetPasswordBodyHint' : ' Please Enter At Least 8 Characters with \n Numbers , Symbols and Upper- and Lowercase Letters' ,
           'save' : 'Save',
+          'success' : 'Success Operation',
+          'checkSuccess':'Now you can got to the Login page ',
 
         },
         'ar': {
@@ -74,6 +78,8 @@ class MyTranslations extends Translations {
           'alreadyHaveAccount' : 'لديك حساب بالفعل ؟',
           'forgotPassword' : 'نسيت كلمة المرور',
           'checkEmail' : 'تحقق من بريدك الإلكتروني',
+          'checkEmailTitle': 'التحقق من البريد الالكتروني',
+          'successSignUp' : 'تم انشاء حساب جديد بنجاح',
           'check': 'تحقق',
           'enterEmailBody' : 'أدخل عنوان بريدك الإلكتروني لإعادة تعيين كلمة المرور',
           'checkEmailBody' : 'لقد أرسلنا كود تحقق إلى عنوان بريدك الإلكتروني. \n يرجى التحقق من بريدك الإلكتروني وإدخال رمز التحقق المرسل  \n لإعادة تعيين كلمة المرور',
@@ -85,6 +91,8 @@ class MyTranslations extends Translations {
           'reTypePassword' : 'أعد كتابة كلمة المرور',
           'resetPasswordBodyHint' : 'يرجى إدخال 8 أحرف على الأقل مع \n أرقام ورموز وأحرف كبيرة وصغيرة',
           'save' : 'حفظ',
+          'success' : 'لقد تمت العملية بنجاح',
+          'checkSuccess':'الان يمكنك الذهاب الي صفحة تسجيل الدخول ',
         },
       };
 }

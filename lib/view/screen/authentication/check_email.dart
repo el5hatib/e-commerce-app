@@ -2,18 +2,18 @@ import 'package:e_commerce/view/widget/authentication/customButtonAuth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../controller/autentication/forget_password_controller.dart';
+import '../../../controller/autentication/check_email_controller.dart';
 import '../../../core/constant/color.dart';
 import '../../widget/authentication/customTextBodyAuth.dart';
 import '../../widget/authentication/customTextFormAuth.dart';
 import '../../widget/authentication/customTextTitleAuth.dart';
 
-class ForgetPassword extends StatelessWidget {
-  const ForgetPassword({super.key});
+class CheckEmail extends StatelessWidget {
+  const CheckEmail({super.key});
 
   @override
   Widget build(BuildContext context) {
-    ForgetPasswordControllerImpl controller = Get.put(ForgetPasswordControllerImpl());
+    CheckEmailControllerImpl controller = Get.put(CheckEmailControllerImpl());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -44,7 +44,6 @@ class ForgetPassword extends StatelessWidget {
             const SizedBox(
               height: 75,
             ),
-
             CustomTextFormAuth(
               hint: 'emailHint',
               label: 'email',
@@ -53,12 +52,11 @@ class ForgetPassword extends StatelessWidget {
               keyboardType: TextInputType.emailAddress,
               myController: controller.emailController,
             ),
-
             const SizedBox(
               height: 80,
             ),
             CustomButtonAuth(buttonText: 'check'.tr, onPressed: () {
-              controller.goToOTP();
+              controller.goToSuccessCreateNewAccount();
             }),
             const SizedBox(
               height: 20,

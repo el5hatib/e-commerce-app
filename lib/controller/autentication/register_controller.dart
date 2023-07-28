@@ -16,7 +16,7 @@ class RegisterControllerImpl extends RegisterController {
   late TextEditingController phoneController;
   @override
   register() {
-
+    Get.offNamed(AppRoutes.checkEmail);
   }
 
   @override

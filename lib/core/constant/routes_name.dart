@@ -9,6 +9,7 @@ class AppRoutes {
   static const String changeLanguage = '/changeLanguage';
   static const String successResetPassword = '/successResetPassword';
   static const String successCreateNewAccount = '/SuccessCreateNewAccount';
+  static const String checkEmail = '/CheckEmail';
   static const String productDetail = '/productDetail';
   static const String cart = '/cart';
   static const String checkout = '/checkout';
