@@ -31,7 +31,7 @@ class SuccessResetPassword extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: CustomButtonAuth(buttonText: 'login'.tr, onPressed: () {
-                Get.offNamed(AppRoutes.login);
+                Get.offAllNamed(AppRoutes.login);
               }),
             ),
           ],

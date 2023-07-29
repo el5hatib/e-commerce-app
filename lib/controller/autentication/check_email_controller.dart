@@ -6,7 +6,7 @@ import '../../core/constant/routes_name.dart';
 abstract class CheckEmailController extends GetxController {
   checkEmail();
 
-  goToSuccessCreateNewAccount();
+  goToRegisterOTP();
 }
 
 class CheckEmailControllerImpl extends CheckEmailController {
@@ -17,8 +17,8 @@ class CheckEmailControllerImpl extends CheckEmailController {
   }
 
   @override
-  goToSuccessCreateNewAccount() {
-    Get.toNamed(AppRoutes.successCreateNewAccount);
+  goToRegisterOTP() {
+    Get.toNamed(AppRoutes.registerOTP);
   }
 
   @override
